@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>달력 UI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .calendar {
+            width: 300px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .weekdays, .days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            margin-top: 10px;
+        }
+        .weekdays div {
+            font-weight: bold;
+            padding: 10px;
+            background: #eee;
+            border-radius: 5px;
+        }
+        .day {
+            padding: 10px;
+            background: #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .day.inactive {
+            color: #bbb;
+            background: #f0f0f0;
+            cursor: default;
+        }
+        .day.active {
+            background: #4CAF50;
+            color: white;
+        }
+        .day.today {
+            background: #FF9800;
+            color: white;
+            font-weight: bold;
+        }
+        #selectedDate {
+            width: 200px;
+            padding: 8px;
+            text-align: center;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #f0f0f0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="selectedDate" readonly placeholder="선택한 날짜">
+    <div class="calendar">
+        <div class="calendar-header">
+            <button id="prevBtn" onclick="prevMonth()">◀</button>
+            <h2 id="monthYear"></h2>
+            <button onclick="nextMonth()">▶</button>
+        </div>
+        <div class="weekdays">
+            <div>일</div>
+            <div>월</div>
+            <div>화</div>
+            <div>수</div>
+            <div>목</div>
+            <div>금</div>
+            <div>토</div>
+        </div>
+        <div class="days" id="calendarDays"></div>
+    </div>
+
+    <script>
+        let currentDate = new Date();
+        let activeDay = null;
+        const today = new Date();
+
+        function renderCalendar() {
+            const monthYear = document.getElementById("monthYear");
+            const daysContainer = document.getElementById("calendarDays");
+            const prevBtn = document.getElementById("prevBtn");
+            daysContainer.innerHTML = "";
+            
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+            monthYear.textContent = `${year}년 ${month + 1}월`;
+            
+            prevBtn.disabled = year === today.getFullYear() && month === today.getMonth();
+            
+            const firstDay = new Date(year, month, 1).getDay();
+            const lastDate = new Date(year, month + 1, 0).getDate();
+            const prevLastDate = new Date(year, month, 0).getDate();
+            
+            for (let i = firstDay - 1; i >= 0; i--) {
+                const dayElement = document.createElement("div");
+                dayElement.classList.add("day", "inactive");
+                dayElement.textContent = prevLastDate - i;
+                daysContainer.appendChild(dayElement);
+            }
+            
+            for (let i = 1; i <= lastDate; i++) {
+                const dayElement = document.createElement("div");
+                dayElement.classList.add("day");
+                dayElement.textContent = i;
+                
+                if (year === today.getFullYear() && month === today.getMonth() && i === today.getDate()) {
+                    dayElement.classList.add("today");
+                }
+                
+                if (year < today.getFullYear() || (year === today.getFullYear() && month < today.getMonth()) || (year === today.getFullYear() && month === today.getMonth() && i < today.getDate())) {
+                    dayElement.classList.add("inactive");
+                } else {
+                    dayElement.addEventListener("click", () => activateDay(dayElement, year, month + 1, i));
+                }
+                
+                daysContainer.appendChild(dayElement);
+            }
+        }
+
+        function activateDay(dayElement, year, month, day) {
+            if (dayElement.classList.contains("inactive")) return;
+            if (activeDay) {
+                activeDay.classList.remove("active");
+            }
+            if (!dayElement.classList.contains("today")) {
+                dayElement.classList.add("active");
+            }
+            activeDay = dayElement;
+            document.getElementById("selectedDate").value = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
+        }
+
+        function prevMonth() {
+            if (currentDate.getFullYear() === today.getFullYear() && currentDate.getMonth() === today.getMonth()) return;
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar();
+        }
+
+        function nextMonth() {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar();
+        }
+
+        renderCalendar();
+    </script>
+</body>
+</html>

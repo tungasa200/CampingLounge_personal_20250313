@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캠핑의 모든것 : 캠핑라운지</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/signin.css">
+    <script src="./js/layout.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/main.js"></script>
+
+</head>
+<body>
+    <!-- header------------------------------------------------------------------------------- -->
+    <header id="header" class="header">
+        <div class="header_inner">
+            <div class="logo_wrap">
+                <h1 class="logo">
+                    <a href="./index.html">
+                        캠핑라운지
+                    </a>
+                </h1>
+            </div><!--logo_wrap-->
+            <nav id="nav">
+                <ul>
+                    <li><a href="#">메뉴 1</a></li>
+                    <li><a href="#">메뉴 2</a></li>
+                    <li><a href="#">메뉴 3</a></li>
+                    <li><a href="#">메뉴 4</a></li>
+                </ul>
+                <div class="login-btn">
+                    <a href="./login.html"><img src="./images/common/icon_login.svg" alt="로그인"></a>
+                </div>
+            </nav>
+        </div><!--header_inner-->
+    </header>
+    <!-- main------------------------------------------------------------------------------- --> 
+    <main id="main" class="signin">
+        <section class="sec">
+            <div class="inner_02">
+                <div class="signin-input-wrap">
+                    <p class="title tit-md mb_md txt-a-c">관리자 등록</p>
+                    <div class="bar bar-lg mb_sm"></div>
+                    <p class="fs_md txt-a-r mb_lg"><span class="tc-e fs_lg">*</span> 은 필수 입력 항목입니다.</p>
+                    <div class="input_wrap">
+                        <form action="" method="post" class="signin-form">
+                            <div class="item">
+                                <label for="id" class="label"><span class="tc-e fs_lg">*</span> 아이디</label>
+                                <input type="text" class="input-txt input-max" name="id" id="id">
+                            </div>
+                            <div class="item">
+                                <label for="pw" class="label"><span class="tc-e fs_lg">*</span> 비밀번호</label>
+                                <input type="password" class="input-txt input-max" name="pw" id="pw">
+                            </div>
+                            <div class="item">
+                                <label for="name" class="label"><span class="tc-e fs_lg">*</span> 이름</label>
+                                <input type="text" class="input-txt input-max" name="name" id="name">
+                            </div>
+                            <div class="item">
+                                <label for="tel" class="label"><span class="tc-e fs_lg">*</span> 전화번호</label>
+                                <input type="text" class="input-txt input-max" name="tel" id="tel">
+                            </div>
+                            <div class="item">
+                                <label for="tel" class="label"><span class="tc-e fs_lg">*</span> 인증코드</label>
+                                <input type="text" class="input-txt input-max" name="tel" id="tel">
+                            </div>
+                            <div class="item-select">
+                                <label for="gender" class="label" >성별</label>
+                                <select name="gender" id="gender" class="select select-md">
+                                    <option value="남자">남자</option>
+                                    <option value="여자">여자</option>
+                                </select>
+                            </div>
+                            <input type="submit" class="submit input-lg" value="관리자 등록">
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- footer------------------------------------------------------------------------------- -->
+    <footer id="footer" class="footer">
+            
+    </footer>
+</body>
+</html>

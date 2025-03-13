@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캠핑의 모든것 : 캠핑라운지</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/review-detail.css">
+    <script src="./js/layout.js"></script>
+    <script src="./js/animation.js"></script>
+    <script src="./js/review-detail.js"></script>
+    
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- fnacybox -->
+    <link rel="stylesheet" href="./css/jquery.fancybox.css">
+    <script src="./js/jquery.fancybox.js"></script>
+</head>
+<body>
+    <!-- header------------------------------------------------------------------------------- -->
+    <header id="header" class="header">
+        <div class="header_inner">
+            <div class="logo_wrap">
+                <h1 class="logo">
+                    <a href="./index.html">
+                        캠핑라운지
+                    </a>
+                </h1>
+            </div><!--logo_wrap-->
+            <nav id="nav">
+                <ul>
+                    <li><a href="#">메뉴 1</a></li>
+                    <li><a href="#">메뉴 2</a></li>
+                    <li><a href="#">메뉴 3</a></li>
+                    <li><a href="#">메뉴 4</a></li>
+                </ul>
+                <div class="login-btn">
+                    <a href="./login.html"><img src="./images/common/icon_login.svg" alt="로그인"></a>
+                </div>
+            </nav>
+        </div><!--header_inner-->
+    </header>
+    <!-- main------------------------------------------------------------------------------- --> 
+    <main id="main" class="review-detail">
+        <section class="sec">
+            <div class="inner_02">
+                <div class="container">
+                    <div class="head-area">
+                        <div class="writer">
+                            <button class="btn-p-f btn btn-xsm"><a href="./member-detail.html">홍길동</a></button>
+                            <button class="btn-s-l btn btn-xsm"><a href="./review-update.html">수정하기</a></button>
+                            <button class="btn-e-l btn btn-xsm">리뷰 삭제</button>
+                        </div>
+                        <div class="date">
+                            <p class="fs_md">2025-02-11 16:41</p>
+                        </div>
+                    </div>
+                    <div class="title-area">
+                        <h3 class="fs_xlg txt-a-c">사천 오토 캠핑장 후기</h3>
+                        <div class="bar bar-lg mt_sm"></div>
+                    </div>
+                    <div class="content-area">
+                        <p class="fs_lg mb_md hidden">캠핑장 정보</p>
+                        <div class="item_wrap">
+                            <div class="info_wrap img-area">
+                                <a href="./camp-detail.html">
+                                    <img src="./images/camp/smaple_01.jpeg" alt="">                                
+                                </a>
+                            </div>
+                            <div class="info_wrap">
+                                <ul class="info_list">
+                                    <li>
+                                        <p class="fs_lg"><b>캠핑장</b> <a href="./camp-detail.html">사천오토캠핑장</a></p>
+                                    </li>
+                                    <li>
+                                        <p class="fs_lg"><b>위치</b> 경남 사천시 서포면 토끼로 245-29</p>
+                                    </li>
+                                    <li>
+                                        <p class="fs_lg"><b>방문일</b> 2025-01-11</p>
+                                    </li>
+                                    <li>
+                                        <p class="fs_lg"><b>만족도</b> 만족해요</p>
+                                    </li>
+                                    <li>
+                                        <p class="fs_lg"><b>사이트 크기</b> 충분해요</p>
+                                    </li>
+                                    <li>
+                                        <p class="fs_lg"><b>청결도</b> 깨끗해요</p>
+                                    </li>
+                                    <li>
+                                        <p class="fs_lg"><b>친절함</b> 완전 친절해요</p>                                    
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bar mt_lg mb_lg"></div>
+                        <div class="content">
+                            <p class="fs_md">
+                                사장님께서 너무 친절하시고 바베큐며 실안내 및 각 사용시설 설명 등 꼼꼼하게 챙겨주셨어요~ <br>각 글래핌(텐트) 난방을 저희 도착 전에 미리 해주셔서 너무 만족스럽습니다. <br>돼지고기 너무 맛있습니다~ 쌈과 채소, 양념장, 라면, 햇반 등 모두 넉넉하게 준비해주셔서 배부르게 먹었습니다. <br>동료들과 함께 총 18명 참여하였는데 부족함없게 챙겨주셔서 감사합니다~^^ 번창하세요!!
+                            </p>
+                            <img src="./images/review/sample_02.jpeg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="bar mt_lg mb_lg"></div>
+                <div class="comment_wrap">
+                    <div class="empty not mb_lg">
+                        <p class="fs_lg txt-a-c">등록된 댓글이 없습니다</p>
+                    </div>
+                    <ul class="comment_list">
+                        <li class="comment">
+                            <div class="profile-area">
+                                <div class="profile-img">
+                                    <img src="" alt="">
+                                </div>
+                                <p class="user-name">
+                                    홍길동
+                                </p>                                
+                            </div>
+                            <div class="comment-content">
+                                <p class="fs_lg">
+                                    정말 멋진 캠핑장이네요!
+                                </p>
+                                <p class="date mt_sm">2025-02-02</p>
+                                <button class="btn-e-l btn btn-xsm  mt_sm">댓글 삭제</button>
+                            </div>
+                        </li>
+                        <li class="comment">
+                            <div class="profile-area">
+                                <div class="profile-img">
+                                    <img src="" alt="">
+                                </div>
+                                <p class="user-name">
+                                    홍길동
+                                </p>                                
+                            </div>
+                            <div class="comment-content">
+                                <p class="fs_lg">
+                                    정말 멋진 캠핑장이네요!
+                                </p>
+                                <p class="date mt_sm">2025-02-02</p>
+                                <button class="btn-e-l btn btn-xsm  mt_sm">댓글 삭제</button>
+                            </div>
+                        </li>
+                        <li class="comment">
+                            <div class="profile-area">
+                                <div class="profile-img">
+                                    <img src="" alt="">
+                                </div>
+                                <p class="user-name">
+                                    홍길동
+                                </p>                                
+                            </div>
+                            <div class="comment-content">
+                                <p class="fs_lg">
+                                    정말 멋진 캠핑장이네요!정말 멋진 캠핑장이네요!정말 멋진 캠핑장이네요!정말 멋진 캠핑장이네요!정말 멋진 캠핑장이네요!정말 멋진 캠핑장이네요!정말 멋진 캠핑장이네요!정말 멋진 캠핑장이네요!정말 멋진 캠핑장이네요!정말 멋진 캠핑장이네요!정말 멋진 캠핑장이네요!정말 멋진 캠핑장이네요!정말 멋진 캠핑장이네요!정말 멋진 캠핑장이네요!정말 멋진 캠핑장이네요!정말 멋진 캠핑장이네요!정말 멋진 캠핑장이네요!정말 멋진 캠핑장이네요!
+                                </p>
+                                <p class="date mt_sm">2025-02-02</p>
+                                <button class="btn-e-l btn btn-xsm mt_sm">댓글 삭제</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="comment_new">
+                        <form action="" class="comment-form">
+                            <textarea name="" id="" class="textarea" placeholder="댓글 입력"></textarea>
+                            <input type="submit" value="댓글 등록">
+                        </form>
+                    </div>
+                </div>
+                <div class="bar mt_xlg mb_lg"></div>
+                <div class="foot-area">
+                    <button class="btn btn-lg btn-p mlr-a"><a href="./review-list.html">목록으로</a></button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- footer------------------------------------------------------------------------------- -->
+    <footer id="footer" class="footer">
+            
+    </footer>
+</body>
+</html>

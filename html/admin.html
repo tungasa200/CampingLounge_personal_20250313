@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캠핑의 모든것 : 캠핑라운지</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <script src="./js/admin.js"></script>
+</head>
+<body>
+    <!-- header------------------------------------------------------------------------------- -->
+    <header id="header" class="header active">
+        <div class="header_inner">
+            <div class="logo_wrap">
+                <h1 class="logo">
+                    <a href="./index.html">
+                        캠핑라운지
+                    </a>
+                    <span class="fs_md tc-p">관리자 페이지</span>
+                </h1>
+            </div><!--logo_wrap-->
+            
+        </div><!--header_inner-->
+    </header>
+    <!-- main------------------------------------------------------------------------------- --> 
+    <main id="main" class="admin">
+        <div id="container" class="container">
+            <div class="inner_00">
+                <aside id="side-menu">
+                    <div class="component">
+                        <h3 class="fs_xlg">관리 메뉴</h3>                        
+                        <nav>
+                            <ul>
+                                <li class="active"><p class="fs_lg"><a href="#">대시보드</a></p></li>
+                                <li><p class="fs_lg"><a href="#">회원 관리</a></p></li>
+                                <li><p class="fs_lg"><a href="#">캠핑장 관리</a></p></li>
+                                <li><p class="fs_lg"><a href="#">예약 관리</a></p></li>
+                                <li><p class="fs_lg"><a href="#">리뷰 관리</a></p></li>
+                                <li><p class="fs_lg"><a href="#">댓글 관리</a></p></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="component">
+                        <h3 class="fs_xlg">관리자 정보</h3>
+                        <div class="table_wrap mb_md">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="tc-p">이메일</td>
+                                        <td>admin@email.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tc-p">이름</td>
+                                        <td>홍길동</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tc-p">등록일</td>
+                                        <td>2025-02-18</td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td class="tc-p">접속 시간</td>
+                                        <td>00:32:17</td>
+                                    </tr>                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <button class="btn btn-s-l btn-sm mlr-a">로그아웃</button>
+                    </div>
+                </aside>
+                <article>
+                    <section id="dashboard" class="component active">
+                        <div class="inner_02">
+                            <div class="item">
+                                <h3 class="fs_xlg">전체 현황</h3>
+                                <ul class="dashboard_list">
+                                    <li>
+                                        <div class="icon"><img src="./images/common/icon_login.svg" alt=""></div>
+                                        <p class="fs_lg mt_md mb_md">전체 회원</p>
+                                        <p class="fs_xlg">1,042 명</p>
+                                    </li>                                
+                                    <li>
+                                        <div class="icon"><img src="./images/camp/icon_playground.svg" alt=""></div>
+                                        <p class="fs_lg mt_md mb_md">등록된 캠핑장</p>
+                                        <p class="fs_xlg">2,048 개</p>
+                                    </li>                                
+                                    <li>
+                                        <div class="icon"><img src="./images/camp/icon_play.svg" alt=""></div>
+                                        <p class="fs_lg mt_md mb_md">진행된 예약</p>
+                                        <p class="fs_xlg">11,532 건</p>
+                                    </li>                                
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h3 class="fs_xlg">신규 회원</h3>
+                                <div class="table_wrap">
+                                    <form action="" class="dashboard-form">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <td><input type="checkbox" class="check-all" onclick="toggleAll(this)"></td>
+                                                    <td>순번</td>
+                                                    <td>이메일</td>
+                                                    <td>이름</td>
+                                                    <td>성별</td>
+                                                    <td>전화번호</td>
+                                                    <td>권한</td>
+                                                    <td>상태</td>
+                                                    <td>가입일</td>
+                                                    <td>수정</td>
+                                                    <td>삭제</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>                                              
+                                                <tr>
+                                                    <td><input type="checkbox" class="checkbox" onclick="checkIndividual()"></td>
+                                                    <td>10</td>
+                                                    <td>your@email.com</td>
+                                                    <td>홍길동</td>
+                                                    <td>남</td>
+                                                    <td>010-1234-5678</td>
+                                                    <td>USER</td>
+                                                    <td>활성</td>
+                                                    <td>2025-02-18</td>
+                                                    <td><button class="btn btn-p-f btn-xsm">수정</button></td>
+                                                    <td><button class="btn btn-e-l btn-xsm">삭제</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="checkbox" onclick="checkIndividual()"></td>
+                                                    <td>9</td>
+                                                    <td>your@email.com</td>
+                                                    <td>홍길동</td>
+                                                    <td>남</td>
+                                                    <td>010-1234-5678</td>
+                                                    <td>USER</td>
+                                                    <td>활성</td>
+                                                    <td>2025-02-18</td>
+                                                    <td><button class="btn btn-p-f btn-xsm">수정</button></td>
+                                                    <td><button class="btn btn-e-l btn-xsm">삭제</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="checkbox" onclick="checkIndividual()"></td>
+                                                    <td>8</td>
+                                                    <td>your@email.com</td>
+                                                    <td>홍길동</td>
+                                                    <td>남</td>
+                                                    <td>010-1234-5678</td>
+                                                    <td>USER</td>
+                                                    <td>활성</td>
+                                                    <td>2025-02-18</td>
+                                                    <td><button class="btn btn-p-f btn-xsm">수정</button></td>
+                                                    <td><button class="btn btn-e-l btn-xsm">삭제</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="checkbox" onclick="checkIndividual()"></td>
+                                                    <td>7</td>
+                                                    <td>your@email.com</td>
+                                                    <td>홍길동</td>
+                                                    <td>남</td>
+                                                    <td>010-1234-5678</td>
+                                                    <td>USER</td>
+                                                    <td>활성</td>
+                                                    <td>2025-02-18</td>
+                                                    <td><button class="btn btn-p-f btn-xsm">수정</button></td>
+                                                    <td><button class="btn btn-e-l btn-xsm">삭제</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="checkbox" onclick="checkIndividual()"></td>
+                                                    <td>6</td>
+                                                    <td>your@email.com</td>
+                                                    <td>홍길동</td>
+                                                    <td>남</td>
+                                                    <td>010-1234-5678</td>
+                                                    <td>USER</td>
+                                                    <td>활성</td>
+                                                    <td>2025-02-18</td>
+                                                    <td><button class="btn btn-p-f btn-xsm">수정</button></td>
+                                                    <td><button class="btn btn-e-l btn-xsm">삭제</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="checkbox" onclick="checkIndividual()"></td>
+                                                    <td>5</td>
+                                                    <td>your@email.com</td>
+                                                    <td>홍길동</td>
+                                                    <td>남</td>
+                                                    <td>010-1234-5678</td>
+                                                    <td>USER</td>
+                                                    <td>활성</td>
+                                                    <td>2025-02-18</td>
+                                                    <td><button class="btn btn-p-f btn-xsm">수정</button></td>
+                                                    <td><button class="btn btn-e-l btn-xsm">삭제</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="checkbox" onclick="checkIndividual()"></td>
+                                                    <td>4</td>
+                                                    <td>your@email.com</td>
+                                                    <td>홍길동</td>
+                                                    <td>남</td>
+                                                    <td>010-1234-5678</td>
+                                                    <td>USER</td>
+                                                    <td>활성</td>
+                                                    <td>2025-02-18</td>
+                                                    <td><button class="btn btn-p-f btn-xsm">수정</button></td>
+                                                    <td><button class="btn btn-e-l btn-xsm">삭제</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="checkbox" onclick="checkIndividual()"></td>
+                                                    <td>3</td>
+                                                    <td>your@email.com</td>
+                                                    <td>홍길동</td>
+                                                    <td>남</td>
+                                                    <td>010-1234-5678</td>
+                                                    <td>USER</td>
+                                                    <td>활성</td>
+                                                    <td>2025-02-18</td>
+                                                    <td><button class="btn btn-p-f btn-xsm">수정</button></td>
+                                                    <td><button class="btn btn-e-l btn-xsm">삭제</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="checkbox" onclick="checkIndividual()"></td>
+                                                    <td>2</td>
+                                                    <td>your@email.com</td>
+                                                    <td>홍길동</td>
+                                                    <td>남</td>
+                                                    <td>010-1234-5678</td>
+                                                    <td>USER</td>
+                                                    <td>활성</td>
+                                                    <td>2025-02-18</td>
+                                                    <td><button class="btn btn-p-f btn-xsm">수정</button></td>
+                                                    <td><button class="btn btn-e-l btn-xsm">삭제</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" class="checkbox" onclick="checkIndividual()"></td>
+                                                    <td>1</td>
+                                                    <td>your@email.com</td>
+                                                    <td>홍길동</td>
+                                                    <td>남</td>
+                                                    <td>010-1234-5678</td>
+                                                    <td>USER</td>
+                                                    <td>활성</td>
+                                                    <td>2025-02-18</td>
+                                                    <td><button class="btn btn-p-f btn-xsm">수정</button></td>
+                                                    <td><button class="btn btn-e-l btn-xsm">삭제</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="bar mt_lg"></div>
+                                        <div>
+                                            <div class="item-box mt_md">
+                                                <p class="fs_lg">< 1 / 10 ></p>
+                                                <input type="submit" value="선택 삭제" class="btn btn-e-l btn-xsm">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="member" class="component">
+                        <div class="inner_02">
+                            
+                        </div>
+                    </section>
+                    <section id="campsite" class="component">
+                        <div class="inner_02">
+                            
+                        </div>
+                    </section>
+                    <section id="reservation" class="component">
+                        <div class="inner_02">
+                            
+                        </div>
+                    </section>
+                    <section id="review" class="component">
+                        <div class="inner_02">
+                            
+                        </div>
+                    </section>
+                    <section id="comment" class="component">
+                        <div class="inner_02">
+                            
+                        </div>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

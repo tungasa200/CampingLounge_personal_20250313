@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캠핑의 모든것 : 캠핑라운지</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/member-update.css">
+    <script src="./js/layout.js"></script>
+    <script src="./js/animation.js"></script>
+    <script src="./js/member-update.js"></script>
+</head>
+<body>
+    <!-- header------------------------------------------------------------------------------- -->
+    <header id="header" class="header">
+        <div class="header_inner">
+            <div class="logo_wrap">
+                <h1 class="logo">
+                    <a href="./index.html">
+                        캠핑라운지
+                    </a>
+                </h1>
+            </div><!--logo_wrap-->
+            <nav id="nav">
+                <ul>
+                    <li><a href="#">메뉴 1</a></li>
+                    <li><a href="#">메뉴 2</a></li>
+                    <li><a href="#">메뉴 3</a></li>
+                    <li><a href="#">메뉴 4</a></li>
+                </ul>
+                <div class="login-btn">
+                    <a href="./member-detail.html"><img src="./images/common/icon_login.svg" alt="로그인"></a>
+                </div>
+            </nav>
+        </div><!--header_inner-->
+    </header>
+    <!-- main------------------------------------------------------------------------------- --> 
+    <main id="main" class="member-update">
+        <section class="sec">
+            <div class="inner_02">
+                <div class="member-update-wrap">
+                    <p class="title tit-md mb_md txt-a-c">회원 정보 수정</p>
+                    <div class="bar bar-lg mb_lg"></div>
+                    <div class="input-wrap">
+                        <form action="" method="post" class="member-update-form">
+                            <div class="item">
+                                <div class="profile-thumb">
+                                    <img src="" alt="프로필 이미지">
+                                </div>
+                                <label for="profile" class="label mt_md">프로필 이미지</label>
+                                <input type="file" id="profile-image" class="input-file input-max" accept=".jpg, .jpeg, .png, .svg, .heic, .webp">
+                            </div>
+                            <div class="item">
+                                <label for="password" class="label">비밀번호 수정</label>                    
+                                <input type="password" id="password" class="input-txt input-max" value="">
+                            </div>
+                            <div class="item">
+                                <label for="password-check" class="label">비밀번호 확인</label>
+                                <input type="password" id="password-check" class="input-txt input-max" value="">
+                            </div>
+                            <div class="item">
+                                <label for="name" class="label">이름</label>
+                                <input type="text" id="name" class="input-txt input-max" value="홍길동">
+                            </div>
+                            <div class="item">
+                                <label for="tel" class="label">전화번호</label>
+                                <input type="text" id="tel" class="input-txt input-max" value="010-1234-5678">
+                            </div>
+                            <div class="item">
+                                <label for="add" class="label">주소</label>
+                                <div class="add-box"><input type="text" class="input-txt input-sm" value="12345"> <button class="btn btn-p-f btn-sm">주소 찾기</button></div>
+                                <input type="text" class="input-txt input-max" value="서울시 당산동 0가 00">
+                                <input type="text" id="add" class="input-txt input-max mt_sm" value="00아파트, 00동 00호">
+                            </div>
+                            <div class="item">
+                                <label for="gender" class="label" >성별</label>
+                                <select name="gender" id="gender" class="select select-md">
+                                    <option value="남자">남자</option>
+                                    <option value="여자">여자</option>
+                                </select>
+                            </div>
+                            <input type="submit" class="submit input-lg" value="회원 정보 수정">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>        
+    </main>
+    <!-- footer------------------------------------------------------------------------------- -->
+    <footer id="footer" class="footer">
+        
+    </footer>
+</body>
+</html>

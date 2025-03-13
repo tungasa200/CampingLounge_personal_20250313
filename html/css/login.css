@@ -1,0 +1,8 @@
+#main.login { min-height: calc(100vh - var(--header-height));}
+#main.login .inner_02 { border:1px solid var(--primary_m); padding-top: var(--space_lg); padding-bottom: var(--space_xlg); border-radius: var(--round-xlg); }
+#main.login .fs_xlg { color: var(--primary_m); }
+#main.login .login-form { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+
+@media screen and (max-width:1280px) {
+    #main.login { padding: 0 1rem; }
+}
